@@ -23,4 +23,19 @@ func _on_mined (crystal: CrystallData):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	time_since_blink += delta
+	if time_since_blink >= 2.0:
+		stimulation += 1
+		stimulation_updated.emit(stimulation)
+		print("stimulation is ", stimulation)
+		time_since_blink = 0.0
+	
+	
+var stimulation: float = 0.0
+var time_since_blink: float = 0.0
+
+signal stimulation_updated(current_stimulation: float)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("blink"):
+		time_since_blink = 0.0

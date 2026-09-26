@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://olckfgfw7r0n" path="res://assets/crystalls/red_crystal.tres" id="10_ir15t"]
 [ext_resource type="PackedScene" uid="uid://cwaa2uqx08sxy" path="res://scenes/show_crystall.tscn" id="11_ca42v"]
 [ext_resource type="PackedScene" uid="uid://divdsbw6vb7i7" path="res://scenes/score.tscn" id="12_dinhu"]
+[ext_resource type="Script" uid="uid://tocf2lae74yv" path="res://scripts/stimulation.gd" id="13_kvuet"]
 
 [node name="Game" type="Node2D" unique_id=1895119970]
 script = ExtResource("1_kvpfn")
@@ -35,3 +36,11 @@ offset_top = 94.0
 offset_right = 749.0
 offset_bottom = 209.0
 text = "current score:"
+
+[node name="Stimulation" type="RichTextLabel" parent="." unique_id=723934967]
+offset_left = 454.0
+offset_top = 387.0
+offset_right = 607.0
+offset_bottom = 416.0
+text = "stimulation:"
+script = ExtResource("13_kvuet")
