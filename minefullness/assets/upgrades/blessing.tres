@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradesData" format=3 uid="uid://bbdhk3wgec02e"]
+
+[ext_resource type="Script" uid="uid://bimwe766syc66" path="res://scripts/upgrades_data.gd" id="1_8gm2n"]
+[ext_resource type="Texture2D" uid="uid://bbmdnhqnsklfa" path="res://assets/DungeonCrawl_ProjectUtumnoTileset.png" id="1_cnorm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnorm"]
+atlas = ExtResource("1_cnorm")
+region = Rect2(1632, 1472, 32, 32)
+
+[resource]
+script = ExtResource("1_8gm2n")
+name = "Blessing of the Mine God"
+icon = SubResource("AtlasTexture_cnorm")
+cost = 100
+metadata/_custom_type_script = "uid://bimwe766syc66"

@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://olckfgfw7r0n" path="res://assets/crystalls/red_crystal.tres" id="10_ir15t"]
 [ext_resource type="PackedScene" uid="uid://cwaa2uqx08sxy" path="res://scenes/show_crystall.tscn" id="11_ca42v"]
 [ext_resource type="PackedScene" uid="uid://divdsbw6vb7i7" path="res://scenes/score.tscn" id="12_dinhu"]
+[ext_resource type="PackedScene" uid="uid://catq0jhse04pp" path="res://scenes/shop_item.tscn" id="12_kvuet"]
 
 [node name="Game" type="Node2D" unique_id=1895119970]
 script = ExtResource("1_kvpfn")
@@ -28,6 +29,14 @@ offset_left = 578.0
 offset_top = 238.0
 offset_right = 683.0
 offset_bottom = 343.0
+
+[node name="shop_item" parent="." unique_id=1535357469 instance=ExtResource("12_kvuet")]
+offset_left = 260.0
+offset_top = 403.0
+offset_right = 347.0
+offset_bottom = 488.0
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Score" parent="." unique_id=825448398 instance=ExtResource("12_dinhu")]
 offset_left = 454.0
