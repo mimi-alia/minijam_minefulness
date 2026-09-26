@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://blw0eewaj58sn"]
 
 [ext_resource type="PackedScene" uid="uid://cu6taq7w0fqnd" path="res://scenes/clicker.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://d6lycqmqbdpb" path="res://scripts/crystall_data.gd" id="2_yqjtg"]
+[ext_resource type="Resource" uid="uid://0p1r7jor2afy" path="res://assets/crystalls/coal.tres" id="3_lbhrr"]
+[ext_resource type="Resource" uid="uid://dxs7uvdgcctal" path="res://assets/crystalls/silver.tres" id="4_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1895119970]
 
@@ -9,3 +12,4 @@ offset_left = 449.0
 offset_top = 237.0
 offset_right = 555.0
 offset_bottom = 343.0
+all_crystalls = Array[ExtResource("2_yqjtg")]([ExtResource("3_lbhrr"), ExtResource("4_iywne")])
