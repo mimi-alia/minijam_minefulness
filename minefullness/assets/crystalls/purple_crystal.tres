@@ -12,4 +12,5 @@ script = ExtResource("2_tbyx0")
 name = "Purple Crystall"
 icon = SubResource("AtlasTexture_kj5hy")
 weight = 5
+points = 500
 metadata/_custom_type_script = "uid://d6lycqmqbdpb"

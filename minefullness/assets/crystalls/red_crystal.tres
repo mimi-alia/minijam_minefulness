@@ -11,4 +11,5 @@ region = Rect2(224, 544, 32, 32)
 script = ExtResource("2_y0eut")
 name = "Red Crystall"
 icon = SubResource("AtlasTexture_kj5hy")
+points = 250
 metadata/_custom_type_script = "uid://d6lycqmqbdpb"

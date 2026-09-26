@@ -40,11 +40,6 @@ signal crystal_mined(crystal: CrystallData)
 func _give_crystal(crystal: CrystallData):
 	crystal_mined.emit(crystal)
 	print("you mined a ", crystal.name)
-	
-	
-	
-	
-	pass
 
 
 # Called when the node enters the scene tree for the first time.
