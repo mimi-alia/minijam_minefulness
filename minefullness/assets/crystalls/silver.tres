@@ -11,5 +11,5 @@ region = Rect2(1408, 416, 32, 32)
 script = ExtResource("2_wpwu4")
 name = "Silver"
 icon = SubResource("AtlasTexture_kj5hy")
-weight = 50
+weight = 80
 metadata/_custom_type_script = "uid://d6lycqmqbdpb"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CrystallData" format=3 uid="uid://b37v7t61gkigv"]
+
+[ext_resource type="Texture2D" uid="uid://bbmdnhqnsklfa" path="res://assets/DungeonCrawl_ProjectUtumnoTileset.png" id="1_ql5ec"]
+[ext_resource type="Script" uid="uid://d6lycqmqbdpb" path="res://scripts/crystall_data.gd" id="2_tbyx0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj5hy"]
+atlas = ExtResource("1_ql5ec")
+region = Rect2(640, 640, 32, 32)
+
+[resource]
+script = ExtResource("2_tbyx0")
+name = "Purple Crystall"
+icon = SubResource("AtlasTexture_kj5hy")
+weight = 5
+metadata/_custom_type_script = "uid://d6lycqmqbdpb"
