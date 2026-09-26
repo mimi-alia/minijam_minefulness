@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cu6taq7w0fqnd"]
+
+[ext_resource type="Texture2D" uid="uid://bbmdnhqnsklfa" path="res://assets/DungeonCrawl_ProjectUtumnoTileset.png" id="1_ecl7i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
+atlas = ExtResource("1_ecl7i")
+region = Rect2(224, 448, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
+atlas = ExtResource("1_ecl7i")
+region = Rect2(160, 448, 32, 32)
+
+[node name="clicker" type="TextureButton" unique_id=64110387]
+offset_left = 537.0
+offset_top = 271.0
+offset_right = 615.0
+offset_bottom = 349.0
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_lnu2h")
+texture_pressed = SubResource("AtlasTexture_lbhrr")
+ignore_texture_size = true
+stretch_mode = 0

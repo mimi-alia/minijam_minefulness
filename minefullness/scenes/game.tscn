@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://blw0eewaj58sn"]
+
+[ext_resource type="PackedScene" uid="uid://cu6taq7w0fqnd" path="res://scenes/clicker.tscn" id="1_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=1895119970]
+
+[node name="clicker" parent="." unique_id=64110387 instance=ExtResource("1_uwrxv")]
+offset_left = 449.0
+offset_top = 237.0
+offset_right = 555.0
+offset_bottom = 343.0
