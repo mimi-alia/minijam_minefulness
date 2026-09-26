@@ -4,9 +4,12 @@ extends TextureButton
 var current_clicks: int = 0
 @export var all_crystalls: Array[CrystallData] = []
 var odds_modifier: int = 0
+@onready var game: Node2D = get_parent()
+
 
 
 func _pressed():
+	
 	current_clicks += 1
 	print(current_clicks)
 	if current_clicks >= clicks_needed:
@@ -22,22 +25,22 @@ func _randomize_clicks():
 	print ("new amount of clicks needed", new_clicks)
 	return new_clicks
 	
-func _pick_crystall(clicks_needed: int) -> CrystallData:
+func _pick_crystall(needed_clicks: int) -> CrystallData:
 	var total_weight:= 0
-	var current_modifier := remap(clicks_needed, 10, 30, 0, 5)
-	print("your odds modifier BEFORE is ", odds_modifier)
-	odds_modifier += current_modifier
-	print("your odds modifier AFTER is ", odds_modifier)
+	var current_modifier := int(remap(needed_clicks, 10, 30, 0, 5))
+	print("your odds modifier BEFORE is ", game.odds_modifier)
+	game.odds_modifier += current_modifier
+	print("your odds modifier AFTER is ", game.odds_modifier)
 	for crystal in all_crystalls:
 		total_weight += crystal.weight
 
-	var roll:= randf_range(0, total_weight+odds_modifier)
+	var roll:= randf_range(0, total_weight+game.odds_modifier)
 	print ("you rolled ", roll)
 	for crystal in all_crystalls:
 		roll-= crystal.weight
 		print (crystal.name, " ", roll)
 		if roll <= 0:
-			odds_modifier -= current_modifier
+			game.odds_modifier -= current_modifier
 			return crystal
 	return all_crystalls[-1]
 

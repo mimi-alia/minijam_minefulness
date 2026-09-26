@@ -7,8 +7,10 @@ var inflation:float = 0.2
 signal item_bought(item: UpgradesData)
 func _pressed():
 	if game.score>=item.cost:
-		item_bought.emit(item)
+		item.previous_cost = item.cost
 		item.cost+= int(item.cost*inflation)
+		item_bought.emit(item)
+		
 		
 	
 # Called when the node enters the scene tree for the first time.
