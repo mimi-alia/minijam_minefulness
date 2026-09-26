@@ -11,5 +11,6 @@ region = Rect2(1120, 544, 32, 32)
 script = ExtResource("1_xnjca")
 name = "Coal"
 icon = SubResource("AtlasTexture_kj5hy")
-weight = 80
+weight = 125
+points = 1
 metadata/_custom_type_script = "uid://d6lycqmqbdpb"

@@ -1,15 +1,37 @@
 [gd_scene format=3 uid="uid://blw0eewaj58sn"]
 
+[ext_resource type="Script" uid="uid://darwx1tmns82i" path="res://scripts/game_manager.gd" id="1_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://cu6taq7w0fqnd" path="res://scenes/clicker.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://d6lycqmqbdpb" path="res://scripts/crystall_data.gd" id="2_yqjtg"]
 [ext_resource type="Resource" uid="uid://0p1r7jor2afy" path="res://assets/crystalls/coal.tres" id="3_lbhrr"]
 [ext_resource type="Resource" uid="uid://dxs7uvdgcctal" path="res://assets/crystalls/silver.tres" id="4_iywne"]
+[ext_resource type="Resource" uid="uid://dut30m7e5ljw8" path="res://assets/crystalls/pearl.tres" id="5_iywne"]
+[ext_resource type="Resource" uid="uid://vjp7daqssdsn" path="res://assets/crystalls/gold.tres" id="7_dinhu"]
+[ext_resource type="Resource" uid="uid://b8w23sbqniktl" path="res://assets/crystalls/blue_crystal.tres" id="8_kvuet"]
+[ext_resource type="Resource" uid="uid://b37v7t61gkigv" path="res://assets/crystalls/purple_crystal.tres" id="9_trtic"]
+[ext_resource type="Resource" uid="uid://olckfgfw7r0n" path="res://assets/crystalls/red_crystal.tres" id="10_ir15t"]
+[ext_resource type="PackedScene" uid="uid://cwaa2uqx08sxy" path="res://scenes/show_crystall.tscn" id="11_ca42v"]
+[ext_resource type="PackedScene" uid="uid://divdsbw6vb7i7" path="res://scenes/score.tscn" id="12_dinhu"]
 
 [node name="Game" type="Node2D" unique_id=1895119970]
+script = ExtResource("1_kvpfn")
 
 [node name="clicker" parent="." unique_id=64110387 instance=ExtResource("1_uwrxv")]
 offset_left = 449.0
 offset_top = 237.0
 offset_right = 555.0
 offset_bottom = 343.0
-all_crystalls = Array[ExtResource("2_yqjtg")]([ExtResource("3_lbhrr"), ExtResource("4_iywne")])
+all_crystalls = Array[ExtResource("2_yqjtg")]([ExtResource("3_lbhrr"), ExtResource("4_iywne"), ExtResource("5_iywne"), ExtResource("7_dinhu"), ExtResource("8_kvuet"), ExtResource("9_trtic"), ExtResource("10_ir15t")])
+
+[node name="show_crystall" parent="." unique_id=1544736100 instance=ExtResource("11_ca42v")]
+offset_left = 578.0
+offset_top = 238.0
+offset_right = 683.0
+offset_bottom = 343.0
+
+[node name="Score" parent="." unique_id=825448398 instance=ExtResource("12_dinhu")]
+offset_left = 454.0
+offset_top = 94.0
+offset_right = 749.0
+offset_bottom = 209.0
+text = "current score:"

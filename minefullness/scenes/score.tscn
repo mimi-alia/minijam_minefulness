@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://divdsbw6vb7i7"]
+
+[ext_resource type="Script" uid="uid://ccqtoi4315bqo" path="res://scripts/score.gd" id="1_8juob"]
+
+[node name="score" type="RichTextLabel" unique_id=2132476836]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_8juob")
