@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://tvbmtynljflu"]
+
+[ext_resource type="Script" uid="uid://bmu2fp315h7kn" path="res://scripts/shop_item.gd" id="1_lrx6i"]
+[ext_resource type="Resource" uid="uid://bbdhk3wgec02e" path="res://assets/upgrades/blessing.tres" id="2_btjjm"]
+[ext_resource type="Script" uid="uid://cqemnpkxhcdhe" path="res://scenes/item_icon.gd" id="3_6gmg1"]
+[ext_resource type="Script" uid="uid://cr1xbdqjcragk" path="res://scenes/show_item_cost.gd" id="4_xcw7k"]
+
+[node name="shop_item" type="TextureButton" unique_id=1535357469]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_lrx6i")
+item = ExtResource("2_btjjm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1614477591]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_6gmg1")
+
+[node name="cost" type="RichTextLabel" parent="." unique_id=116502506]
+layout_mode = 0
+offset_top = 107.0
+offset_right = 225.0
+offset_bottom = 158.0
+text = "price"
+script = ExtResource("4_xcw7k")
