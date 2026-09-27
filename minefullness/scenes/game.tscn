@@ -12,6 +12,10 @@
 [ext_resource type="Resource" uid="uid://olckfgfw7r0n" path="res://assets/crystalls/red_crystal.tres" id="10_ir15t"]
 [ext_resource type="PackedScene" uid="uid://cwaa2uqx08sxy" path="res://scenes/show_crystall.tscn" id="11_ca42v"]
 [ext_resource type="PackedScene" uid="uid://divdsbw6vb7i7" path="res://scenes/score.tscn" id="12_dinhu"]
+[ext_resource type="Script" uid="uid://tocf2lae74yv" path="res://scripts/stimulation.gd" id="13_kvuet"]
+[ext_resource type="Script" uid="uid://cmt1byq0h1moe" path="res://scripts/blink_prompt.gd" id="14_ssvqc"]
+[ext_resource type="Script" uid="uid://brctoreipp3fv" path="res://scripts/breath_prompt.gd" id="15_264po"]
+[ext_resource type="Script" uid="uid://bxhpyqo2hdarr" path="res://scripts/breath_hold_progress_bar.gd" id="18_37s47"]
 [ext_resource type="PackedScene" uid="uid://tvbmtynljflu" path="res://scenes/shop_item.tscn" id="12_kvuet"]
 [ext_resource type="Resource" uid="uid://btaks58e0qaax" path="res://assets/upgrades/dwarf.tres" id="13_ir15t"]
 [ext_resource type="PackedScene" uid="uid://4oyc4b5xpypo" path="res://scenes/income_timer.tscn" id="14_trtic"]
@@ -62,6 +66,52 @@ offset_right = 749.0
 offset_bottom = 209.0
 text = "current score:"
 
+[node name="Stimulation" type="RichTextLabel" parent="." unique_id=723934967]
+offset_left = 454.0
+offset_top = 387.0
+offset_right = 607.0
+offset_bottom = 416.0
+text = "stimulation:"
+script = ExtResource("13_kvuet")
+
+[node name="BlinkTimer" type="Timer" parent="." unique_id=104878677]
+wait_time = 3.0
+autostart = true
+
+[node name="BlinkWindowTimer" type="Timer" parent="." unique_id=1630171512]
+one_shot = true
+
+[node name="BreathTimer" type="Timer" parent="." unique_id=213183602]
+wait_time = 20.0
+autostart = true
+
+[node name="BreathWindowTimer" type="Timer" parent="." unique_id=1685062971]
+wait_time = 4.0
+one_shot = true
+
+[node name="BreathHoldTimer" type="Timer" parent="." unique_id=2024959985]
+one_shot = true
+
+[node name="BlinkPrompt" type="Label" parent="." unique_id=77207090]
+offset_left = 473.0
+offset_top = 197.0
+offset_right = 513.0
+offset_bottom = 220.0
+script = ExtResource("14_ssvqc")
+
+[node name="BreathPrompt" type="Label" parent="." unique_id=796927443]
+offset_left = 480.0
+offset_top = 157.0
+offset_right = 520.0
+offset_bottom = 180.0
+script = ExtResource("15_264po")
+
+[node name="BreathHoldProgressBar" type="ProgressBar" parent="." unique_id=986335676]
+offset_left = 683.0
+offset_top = 268.0
+offset_right = 749.0
+offset_bottom = 295.0
+script = ExtResource("18_37s47")
 [node name="IncomeTimer" parent="." unique_id=1541576437 instance=ExtResource("14_trtic")]
 
 [node name="passive_income_label" type="Label" parent="." unique_id=280002906]
