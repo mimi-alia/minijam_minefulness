@@ -47,7 +47,6 @@ func _ready() -> void:
 	upgrade_item2.item_bought.connect(_on_purchased)
 	income_timer.timeout.connect(_on_dwarf_mining)
 
-signal score_updated(current_score: int)
 
 func _on_mined (crystal: CrystallData):
 	crystal_texture.texture = crystal.icon
