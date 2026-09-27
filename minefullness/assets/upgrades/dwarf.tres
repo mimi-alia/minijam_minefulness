@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UpgradesData" format=3 uid="uid://btaks58e0qaax"]
+
+[ext_resource type="Script" uid="uid://bimwe766syc66" path="res://scripts/upgrades_data.gd" id="1_f77lk"]
+[ext_resource type="Texture2D" uid="uid://bbmdnhqnsklfa" path="res://assets/DungeonCrawl_ProjectUtumnoTileset.png" id="1_ie7i8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie7i8"]
+atlas = ExtResource("1_ie7i8")
+region = Rect2(416, 32, 32, 32)
+
+[resource]
+script = ExtResource("1_f77lk")
+name = "Mining Dwarf"
+icon = SubResource("AtlasTexture_ie7i8")
+previous_cost = 300
+cost = 300
+modifier = 0
+passive_income = 1
+metadata/_custom_type_script = "uid://bimwe766syc66"

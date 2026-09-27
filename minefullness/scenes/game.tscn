@@ -16,6 +16,15 @@
 [ext_resource type="Script" uid="uid://cmt1byq0h1moe" path="res://scripts/blink_prompt.gd" id="14_ssvqc"]
 [ext_resource type="Script" uid="uid://brctoreipp3fv" path="res://scripts/breath_prompt.gd" id="15_264po"]
 [ext_resource type="Script" uid="uid://bxhpyqo2hdarr" path="res://scripts/breath_hold_progress_bar.gd" id="18_37s47"]
+[ext_resource type="PackedScene" uid="uid://tvbmtynljflu" path="res://scenes/shop_item.tscn" id="12_kvuet"]
+[ext_resource type="Resource" uid="uid://btaks58e0qaax" path="res://assets/upgrades/dwarf.tres" id="13_ir15t"]
+[ext_resource type="PackedScene" uid="uid://4oyc4b5xpypo" path="res://scenes/income_timer.tscn" id="14_trtic"]
+[ext_resource type="Script" uid="uid://1wjrlihgq1oc" path="res://scenes/passive_income_label.gd" id="16_ca42v"]
+[ext_resource type="Texture2D" uid="uid://bbmdnhqnsklfa" path="res://assets/DungeonCrawl_ProjectUtumnoTileset.png" id="17_rysoc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mwc7"]
+atlas = ExtResource("17_rysoc")
+region = Rect2(416, 32, 32, 32)
 
 [node name="Game" type="Node2D" unique_id=1895119970]
 script = ExtResource("1_kvpfn")
@@ -32,6 +41,23 @@ offset_left = 578.0
 offset_top = 238.0
 offset_right = 683.0
 offset_bottom = 343.0
+
+[node name="shop_item" parent="." unique_id=1535357469 instance=ExtResource("12_kvuet")]
+offset_left = 260.0
+offset_top = 403.0
+offset_right = 347.0
+offset_bottom = 488.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="shop_item2" parent="." unique_id=1558900946 instance=ExtResource("12_kvuet")]
+offset_left = 407.0
+offset_top = 403.0
+offset_right = 494.0
+offset_bottom = 488.0
+ignore_texture_size = true
+stretch_mode = 0
+item = ExtResource("13_ir15t")
 
 [node name="Score" parent="." unique_id=825448398 instance=ExtResource("12_dinhu")]
 offset_left = 454.0
@@ -86,3 +112,21 @@ offset_top = 268.0
 offset_right = 749.0
 offset_bottom = 295.0
 script = ExtResource("18_37s47")
+[node name="IncomeTimer" parent="." unique_id=1541576437 instance=ExtResource("14_trtic")]
+
+[node name="passive_income_label" type="Label" parent="." unique_id=280002906]
+offset_left = 971.99994
+offset_top = 423.0
+offset_right = 1011.99994
+offset_bottom = 446.0
+scale = Vector2(4.2799997, 3.0289555)
+script = ExtResource("16_ca42v")
+
+[node name="dwarf_icon" type="TextureRect" parent="." unique_id=1156333747]
+visible = false
+offset_left = 983.0
+offset_top = 492.05127
+offset_right = 1129.0571
+offset_bottom = 638.10846
+scale = Vector2(1.0064555, 1)
+texture = SubResource("AtlasTexture_7mwc7")
