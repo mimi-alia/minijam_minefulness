@@ -11,5 +11,7 @@ region = Rect2(1632, 1472, 32, 32)
 script = ExtResource("1_8gm2n")
 name = "Blessing of the Mine God"
 icon = SubResource("AtlasTexture_cnorm")
+previous_cost = 100
 cost = 100
+max_tier = 10
 metadata/_custom_type_script = "uid://bimwe766syc66"

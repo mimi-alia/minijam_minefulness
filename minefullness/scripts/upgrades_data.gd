@@ -6,3 +6,6 @@ class_name UpgradesData
 @export var previous_cost: int = 10
 @export var cost: int = 10
 @export var modifier: int = 1
+@export var passive_income: int = 0
+@export var tier: int = 1
+@export var max_tier: int = 5

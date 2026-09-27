@@ -8,6 +8,7 @@ var score:int = 100
 
 func _ready() -> void:
 	game.score_updated.connect(_on_updated)
+	self.text = str(default_text, str(game.score))
 
 func _on_updated(updated_score: int):
 	print(updated_score)

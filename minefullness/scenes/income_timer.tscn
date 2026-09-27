@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://4oyc4b5xpypo"]
+
+[node name="IncomeTimer" type="Timer" unique_id=1541576437]
+wait_time = 5.0
+autostart = true
