@@ -3,13 +3,18 @@ extends TextureButton
 @export var item: UpgradesData
 @onready var game: Node2D = get_parent()
 var inflation:float = 0.2
+var income_multiplier:int = 5
 
 signal item_bought(item: UpgradesData)
 func _pressed():
 	if game.score>=item.cost:
+		var purchased_copy = item.duplicate()
+		item_bought.emit(purchased_copy)
 		item.previous_cost = item.cost
 		item.cost+= int(item.cost*inflation)
-		item_bought.emit(item)
+		item.tier+=1
+		if item.passive_income > 0:
+			item.passive_income*=income_multiplier
 		
 		
 	
